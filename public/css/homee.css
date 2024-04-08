@@ -1,0 +1,598 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	margin: 0 auto;
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-size: 16px;
+	background-color: rgb(244, 244, 243);
+}
+.container {
+	width: 100%;
+	height: 70%;
+}
+.hero {
+	height: 80%;
+	max-height: 520px;
+	background: #f5f3f4;
+}
+.header {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 45px;
+  
+}
+.header ul {
+	display: flex;
+	align-items: center;
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  list-style: none;
+}
+li {
+  padding: 5%;
+}
+.header ul li {
+	list-style: none;
+	margin: 0 25px;
+	color: #3e3e3e;
+}
+.header ul li a {
+	text-decoration: none;
+  list-style: none;
+	color: #3e3e3e;
+}
+.header ul li a:hover {
+	color: #12125b;
+  list-style: none;
+}
+.header ul li:last-child {
+	background: #fff;
+	padding: 15px 45px;
+	margin: 0 0 0 25px;
+	border-radius: 5px;
+	border: 1px solid #dcdcdc;
+	color: #12125b;
+  list-style: none;
+	font-weight: 500;
+}
+.header ul li:last-child:hover {
+	background: #1d20ea;
+	color: #fff;
+  list-style: none;
+}
+
+.left img {
+	position: absolute;
+	width: 10%;
+	top: 10%;
+	left: 0;
+}
+.left .svg {
+	left: 0%;
+	top: 25%;
+}
+.right img {
+	position: absolute;
+	width: 10%;
+	top: 25%;
+	right: 0;
+}
+.right .svg {
+	width: 10%;
+	right: 0%;
+	top: 10%;
+	transform: rotate(-8deg);
+}
+.content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.content .logo {
+	width: 13%;
+}
+.content h2 {
+	font-size: 2.5rem;
+	color: #3e3e3e;
+	font-weight: 600;
+	margin: 1% 0;
+  text-align: center;
+}
+.content h2 span {
+	color: #12125b;
+	text-decoration: none;
+}
+
+.content p {
+	color: #3e3e3e;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+.form {
+	width: 100%;
+	max-width: 780px;
+	display: flex;
+}
+.form .search {
+	width: 100%;
+	max-width: 650px;
+	background: #fff;
+	height: 50px;
+  border-radius: 52px;
+	margin-right: 20px;
+	display: flex;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.form .search img {
+	width: 26px;
+	margin: 0 20px;
+}
+.form .search input {
+	width: 100%;
+	background: transparent;
+	border: 0;
+	outline: none;
+	font-size: 1rem;
+}
+.form .search input::placeholder {
+	font-weight: 400;
+	color: #a6a6a6;
+}
+.form button {
+	width: 210px;
+	background: #0b0a47;
+	color: #fff;
+	font-weight: 400;
+	border: 0;
+	border-radius: 45px;
+	transition: 0.2s;
+}
+.form button:hover {
+	background: #676565;
+	transform: scale(1.02);
+}
+
+.tags {
+    display: flex;
+    margin: 30px 0;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    list-style: none;
+}
+
+.tags span {
+    color: #ffffffbd;
+}
+
+.tags .geral1 {
+    margin: 30px 0;
+    text-decoration: none;
+    background-color: rgb(27, 85, 146);
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    list-style: none;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.tags .geral1:hover {
+  background-color: #042a4ff2;
+}
+
+.tags span.geral1 {
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: #ebe1e1;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+    margin: 6px;
+}
+
+.tags .gluten1 {
+    margin: 30px 0;
+    text-decoration: none;
+    background-color: rgb(27, 85, 146);
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    list-style: none;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.tags .gluten1:hover {
+  background-color: #042a4ff2;
+}
+
+.tags span.gluten1 {
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: #ebe1e1;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+    margin: 6px;
+}
+
+.tags .lactose1 {
+    margin: 30px 0;
+    text-decoration: none;
+    background-color: rgb(27, 85, 146);
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    list-style: none;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.tags .lactose1:hover {
+  background-color: #042a4ff2;
+}
+
+.tags span.lactose1 {
+    font-size: 0.875rem;
+    text-decoration: none;
+    font-weight: 400;
+    color: #ebe1e1;
+    border: 1px solid #ccc;
+    padding: 4px;
+    border-radius: 3px;
+    margin: 6px;
+}
+
+.tags .vegano1 {
+  margin: 30px 0;
+  text-decoration: none;
+  background-color: rgb(27, 85, 146);
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  list-style: none;
+  margin-right: 2%;
+  text-align: center;
+}
+
+.tags .vegano1:hover {
+  background-color: #042a4ff2;
+}
+
+.tags span.vegano1 {
+  font-size: 0.875rem;
+  text-decoration: none;
+  font-weight: 400;
+  color: #ebe1e1;
+  border: 1px solid #ccc;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 6px;
+}
+
+
+.banner {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+.banner img {
+	width: 100%;
+	max-width: 30%;
+	margin: 0 10px;
+	transition: 0.2s;
+}
+
+.banner img:hover {
+	transform: scale(1.02);
+}
+
+.footer {
+	margin: 20px;
+	border-top: 1px solid #dcdcdc;
+	display: flex;
+	padding: 20px 0;
+}
+
+.footer img {
+	width: 50px;
+}
+
+.footer span {
+	font-size: 0.8125rem;
+	color: #818181;
+	margin: 0 20px;
+}
+
+.left{
+	background-color: #0b0a47;
+}
+
+.menu-section {
+	margin: 20px;
+}
+  
+.menu-item {
+align-items: center;
+padding: 10px;
+margin-bottom: 10px;
+transition: transform 0.2s;
+}
+
+.menu-item:hover {
+transform: translateY(-5px); /* Efeito de elevação suave ao passar o mouse */
+}
+
+.item-image {
+border-radius: 20%;
+max-width: 17%;
+height: auto;
+margin-right: 10px;
+transition: transform 0.2s;
+}
+
+.item-image:hover {
+transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.item-details {
+flex-grow: 1;
+}
+
+.buy-button {
+  background-color: #125293;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.buy-button:hover {
+  background-color: #474747;
+}
+
+/* Estilização adicional para tornar o botão mais elegante */
+.buy-button:active {
+  background-color: #1e487c;
+  transform: translateY(1px);
+}
+
+.buy-button:focus {
+  outline: none;
+}
+
+/* Estilo de hover mais suave */
+.buy-button:hover {
+  background-color: #1e487c;
+}
+
+a{
+list-style: none;
+text-decoration: none;
+}
+
+
+/* Estilos para as seções Sem Glúten e Sem Lactose */
+.menu-section h2 {
+margin-top: 20px;
+font-size: 24px;
+color: #062341;
+border-bottom: 2px solid #4f4f4f;
+padding-bottom: 2%;
+display: inline-block;
+margin-left: 5%;
+margin-bottom: 10px;
+transition: border-color 0.3s;
+}
+
+.menu-section h2:hover {
+border-color: #0056b3; /* Efeito de destaque na borda ao passar o mouse */
+}
+
+
+.navbar {
+background-color: #0A385C;
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-links {
+display: flex;
+margin-right: 5%;
+}
+
+.navbar-links a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+color: #90caf9;
+}
+
+/* Botão de ativação do carrinho */
+#toggle-cart-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007BFF; /* Cor moderna */
+    color: #007BFF;
+    background-size: cover; /* Redimensiona a imagem para cobrir o botão */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos para o carrinho de compras */
+#cart-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    max-height: 80%;
+    z-index: 1;
+    padding: 20px;
+}
+
+.remove-item-button{
+  background-color: #007BFF;
+  color: #fff; /* Cor do texto em branco */
+  padding: 10px 25px; /* Espaçamento interno para o botão */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor de apontar mão */
+  transition: background-color 0.3s; /* Efeito de transição suave na cor de fundo */
+
+}
+.remove-item-button:hover{
+  background-color: #0056b3;
+}
+/* Estilos para os botões no carrinho de compras */
+.cart-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-buttons button {
+    background-color: #100955;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.cart-buttons button:hover {
+    background-color: #777676;
+}
+
+/* Outros estilos para o carrinho de compras (pode adicionar mais conforme necessário) */
+
+/* Estilos para a entrada de texto do cupom */
+.coupon-input {
+    width: 180px; /* Largura ajustada para a entrada de texto */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #100955; /* Cor cinza empresarial */
+    border-radius: 6px 0 0 6px; /* Bordas arredondadas apenas à esquerda */
+    outline: none; /* Remove a borda de foco */
+    display: inline-block; /* Torna o elemento um bloco inline */
+    vertical-align: middle; /* Alinha verticalmente no meio */
+}
+
+/* Estilos para o botão de aplicar cupom */
+.coupon-button {
+    width: 85px; /* Largura fixa */
+    height: 40px;
+    background-color: #100955; /* Cor cinza empresarial */
+    color: white;
+    border: none;
+    border-radius: 0 6px 6px 0; /* Bordas arredondadas apenas à direita */
+    padding: 0; /* Removemos o padding para ajustar manualmente o tamanho do botão */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+    display: inline-block; /* Torna o elemento um bloco inline */
+    vertical-align: middle; /* Alinha verticalmente no meio */
+}
+
+.coupon-button:hover {
+    background-color: #303030; /* Cor de destaque cinza mais escura ao passar o mouse */
+}
+.back {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004894;
+  background-size: cover; /* Redimensiona a imagem para cobrir o botão */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 24px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+}
+
+.back:hover {
+  background-color: #042a4ff2; /* Azul Báltico mais escuro no hover */
+}
+
+.back span {
+  font-size: 0.875rem;
+  text-decoration: none;
+  font-weight: 400;
+  color: #ebe1e1;
+  padding: 4px;
+  border-radius: 3px;
+  margin: 6px;
+}

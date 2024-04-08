@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/homee.css">
+  <link rel="icon" href="img/certo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<title>Code & Cuisine</title>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+      <div class="left">
+        <img src="./img/dish-left.png" alt="" />
+        <img class="svg" src="./img/Design sem nome.png" alt="" />
+      </div>
+      <div class="right">
+        <img class="svg" src="./img/Design sem nome (1).png" alt="" />
+        <img src="./img/dish-right.png" alt="" />
+      </div>
+      <div class="content">
+        <img src="./img/Black_and_White_Illustration_Food_Logo-removebg-preview.png" alt="" class="logo" />
+        <h2>Nunca foi tão fácil se <span>servir</span></h2>
+        <p>Uma experiência única</p>
+
+
+        <div class="tags">
+          <div class="geral1"><a href="#geral"><span>Itens gerais</span></a></div>
+          <div class="gluten1"><a href="#gluten"><span>Sem Glúten</span></a></div>
+          <div class="lactose1"><a href="#lactose"><span>Sem Lactose</span></a></div>
+          <div class="vegano1"><a href="#vegano"><span>Itens Veganos</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <img src="./img/vegano.png" alt="" />
+    <img src="./img/pizza.png" alt="" />
+    <img src="./img/pudim.png" alt="" />
+  </div>
+
+  <main>
+   
+    <section class="menu-section" id="geral">
+      <h2>Opções do Cardápio</h2>
+      <div class="menu-item">
+        <ul id="pratos-list">
+          <!-- Os pratos filtrados serão adicionados aqui -->
+      </ul>
+      <ul>
+        <% pratos.forEach(function(prato) { %>
+          <li>
+            <% if (prato.imagem) { %>
+              <img src="<%= prato.imagem %>" alt="<%= prato.nome %>" class="item-image">
+            <% } %>
+            <h3><%= prato.nome %></h3>
+            <p><%= prato.descricao %> <br> R$ <%= prato.preco %></p>
+            <button class="buy-button">Comprar</button>
+          </li>
+        <% }); %>
+      </ul>
+      </div>
+      <ul>
+        <section class="menu-section" id="gluten">
+        <h2>Sem glúten</h2>
+        <div class="menu-item">
+        <% pratos.forEach(function(prato) { %>
+          <% if (!prato.gluten) { %> <!-- Verifica se o prato não tem glúten -->
+            <li>
+              <% if (prato.imagem) { %>
+                <img src="<%= prato.imagem %>" alt="<%= prato.nome %>" class="item-image">
+              <% } %>
+              <h3><%= prato.nome %></h3>
+              <p><%= prato.descricao %> <br> R$ <%= prato.preco %></p>
+              <button class="buy-button">Comprar</button>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    </div>
+
+      <section class="menu-section" id="lactose">
+      <h2>Sem lactose</h2>
+      <div class="menu-item">
+      <ul>
+        <% pratos.forEach(function(prato) { %>
+          <% if (!prato.lactose) { %> <!-- Verifica se o prato não tem glúten -->
+            <li>
+              <% if (prato.imagem) { %>
+                <img src="<%= prato.imagem %>" alt="<%= prato.nome %>" class="item-image">
+              <% } %>
+              <h3><%= prato.nome %></h3>
+              <p><%= prato.descricao %> <br> R$ <%= prato.preco %></p>
+              <button class="buy-button">Comprar</button>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    </div>
+
+      <section class="menu-section" id="vegano">
+      <h2>Vegano</h2>
+      <div class="menu-item">
+      <ul>
+        <% pratos.forEach(function(prato) { %>
+          <% if (prato.vegano) { %> <!-- Verifica se o prato não tem glúten -->
+            <li>
+              <% if (prato.imagem) { %>
+                <img src="<%= prato.imagem %>" alt="<%= prato.nome %>" class="item-image">
+              <% } %>
+              <h3><%= prato.nome %></h3>
+              <p><%= prato.descricao %> <br> R$ <%= prato.preco %></p>
+              <button class="buy-button">Comprar</button>
+            </li>
+          <% } %>
+        <% }); %>
+      </ul>
+    </div>
+         
+  			    <!-- carrinho -->
+        <button id="toggle-cart-button" class="cart-icon-button">
+          <img src="./img/carrinho-24.png" alt="Carrinho de Compras">
+        </button>
+        
+        <div class="cart-container" id="cart-container">
+          <div class="cart">
+            <h2>Seu Carrinho</h2>
+            <div id="coupon-message"></div>
+            <div id="finish-message"></div>
+            <ul id="cart-items">
+              <!-- itens carrinho aqui -->
+            </ul>
+            <img id="imagem" src="./img/qrcode.png" alt="Imagem"  style="display: none; width: 150px;">
+            <div class="subtotal">
+              Subtotal: R$ <span id="subtotal">0.00</span>
+            </div>
+            <input type="text" id="coupon-input" class="coupon-input" placeholder="Cupom de desconto">
+            <button id="apply-coupon-button" class="coupon-button">Aplicar Cupom</button>
+           
+            <div class="cart-buttons">
+              <button id="mostrar-imagem">Pagar com QR Code</button>
+              <button id="garçom">Pagar com cartão</button>
+              <button id="buy-again">Comprar Novamente</button>
+            </div>
+          </div>
+        </div>
+        <div class="back"><a href="/pratos"><span>^</span></a></div>
+      <div class="footer">
+        <img src="./img/Black_and_White_Illustration_Food_Logo-removebg-preview.png" alt="" />
+        <span>© Copyright 2023 - Code & Cuisine <br />Todos os direitos reservados</span>
+      </div>
+    </div>
+    <script type="module" src="./js/home.js"></script>
+  </body>
+</html>

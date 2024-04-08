@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/styleindex.css">
+  <link rel="icon" href="img/certo.png">
+  <title>Code&Cuisine Restaurante</title>
+</head>
+<body>
+  <div class="hero">
+    <div class="left">
+      <img src="./img/dish-left.png" alt="" />
+      <img class="svg" src="./img/Design sem nome.png" alt="" />
+    </div>
+    <div class="right">
+      <img class="svg" src="./img/Design sem nome (1).png" alt="" />
+      <img src="./img/dish-right.png" alt="" />
+    </div>
+  <div class="content">
+    <img src="./img/Black_and_White_Illustration_Food_Logo-removebg-preview.png" alt="" class="logo" />
+    <h2>Nunca foi tão fácil <span>servir</span></h2>
+   </div>
+  <ul>
+    <% pratos.forEach(function(prato) { %>
+      <li>
+        <% if (prato.imagem) { %>
+          <img src="<%= prato.imagem %>" alt="<%= prato.nome %> Imagem" width="100" height="100">
+        <% } %>
+        <h3><%= prato.nome %></h3>
+        <p><%= prato.descricao %> - R$ <%= prato.preco %></p>
+      </li>
+    <% }); %>
+  </ul>
+  
+  <div class="content">
+  <h2>Adicionar Novo Prato</h2>
+</div>
+<form action="/adicionar-prato" id="input-group" method="post">
+  <label for="nome">Nome do Prato:</label>
+  <input type="text" name="nome" required>
+
+  <label for="descricao">Descrição:</label>
+  <textarea name="descricao" required></textarea>
+
+  <label for="preco">Preço:</label>
+  <input type="number" name="preco" step="0.01" required>
+
+  <label for="imagem">URL da Imagem:</label>
+  <input type="text" name="imagem" placeholder="URL da imagem do prato">
+
+  <!-- Adicione campos para valores booleanos -->
+  <label for="gluten">Contém Glúten?</label>
+  <input type="checkbox" name="gluten" value="true">
+
+  <label for="vegano">É Vegano?</label>
+  <input type="checkbox" name="vegano" value="true">
+
+  <label for="lactose">Contém Lactose?</label>
+  <input type="checkbox" name="lactose" value="true">
+  <br>
+  <br>
+  <button type="submit">Adicionar Prato</button>
+</form>
+
+<div class="footer">
+  <img src="./img/Black_and_White_Illustration_Food_Logo-removebg-preview.png" alt="" />
+  <span>© Copyright 2023 - Code & Cuisine <br />Todos os direitos reservados</span>
+</div>
+  
+</body>
+</html>
